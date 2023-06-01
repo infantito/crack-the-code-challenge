@@ -19,6 +19,7 @@
     ".nvmrc": true,
     "package-lock.json": true,
     ".eslintrc.js": true,
+    ".eslintrc.json": true,
     ".eslintignore": true,
     ".editorconfig": true,
     ".prettierrc": true,
