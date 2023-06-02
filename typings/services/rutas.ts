@@ -1,4 +1,4 @@
-interface Course {
+interface RutasCourse {
   groups: any[]
   id: number
   name: string
@@ -46,7 +46,7 @@ interface Ruta {
   icon: string
   description: string
   order: number
-  courses: Course[]
+  courses: RutasCourse[]
   level: number
   has_seo_noindex: boolean
 }
@@ -57,4 +57,4 @@ interface RutasResponse {
   design_and_creativity: Ruta[]
 }
 
-export type { Ruta, Course, RutasResponse }
+export type { Ruta, RutasCourse, RutasResponse }
