@@ -1,0 +1,19 @@
+.feed {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-auto-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
+  justify-content: center;
+  justify-items: center;
+
+  @media only screen and (max-width: 640px) {
+    .feed {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+    }
+  }
+}

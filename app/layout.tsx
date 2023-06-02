@@ -1,8 +1,9 @@
 import '@styles/globals.css'
-import { Inter } from 'next/font/google'
-import { ReactNodeProps } from '@typings'
+import { Sofia_Sans } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import type { ReactNodeProps } from '@typings'
+
+const sofia = Sofia_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Crack The Code',
@@ -14,7 +15,7 @@ const RootLayout = (props: ReactNodeProps) => {
 
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={sofia.className}>{children}</body>
     </html>
   )
 }
