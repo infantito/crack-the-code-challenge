@@ -2,6 +2,7 @@ import classnames from './card.module.scss'
 
 import * as React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 import type { CardProps } from '@typings'
 import Link from 'next/link'
@@ -10,10 +11,20 @@ import { Routes } from '@constants'
 const Card = (props: CardProps) => {
   const { ruta } = props
 
-  const href = Routes.COURSE_DETAIL.replace(':slug', ruta.slug)
+  const router = useRouter()
+
+  const href = Routes.RUTA_DETAIL.replace(':slug', ruta.slug)
+
+  const handleNavigate = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const target = event.target as HTMLElement
+
+    if (target.tagName !== 'A') {
+      router.push(href)
+    }
+  }
 
   return (
-    <div className={classnames.card}>
+    <button type="button" onClick={handleNavigate} className={classnames.card}>
       <div className={classnames.card__banner}>
         <Image
           className="object-cover"
@@ -44,7 +55,7 @@ const Card = (props: CardProps) => {
           </Link>
         </div>
       </div>
-    </div>
+    </button>
   )
 }
 

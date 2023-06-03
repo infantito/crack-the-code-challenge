@@ -1,7 +1,7 @@
 enum Routes {
   HOME = '/',
-  COURSES = '/rutas',
-  COURSE_DETAIL = '/rutas/:slug',
+  RUTAS = '/rutas',
+  RUTA_DETAIL = '/rutas/:slug',
 }
 
 export { Routes }

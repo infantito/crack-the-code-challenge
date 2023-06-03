@@ -1,17 +1,15 @@
-.page {
-  background-color: #6552ff;
-  background-image: linear-gradient(109.78deg, #6df2f2 15.67%, #8e84fd 86.57%);
-  position: relative;
+.main {
+  min-height: calc(100vh - 120px);
+  width: 100%;
 }
 
 .content {
   max-width: 1920px;
-  max-width: 0 auto;
+  margin: 0 auto;
   width: 100%;
 }
 
 .banner {
-  height: 420px;
   position: relative;
   margin-bottom: 24px;
   width: 100%;

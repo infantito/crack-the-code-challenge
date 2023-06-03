@@ -1,0 +1,20 @@
+.footer {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  font-size: 36px;
+  font-style: 800;
+  height: 120px;
+  justify-content: center;
+  padding: 24px;
+  width: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 28px;
+  }
+
+  @media only screen and (max-width: 640px) {
+    font-size: 20px;
+  }
+}

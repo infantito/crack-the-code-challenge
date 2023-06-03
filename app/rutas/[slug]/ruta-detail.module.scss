@@ -1,11 +1,23 @@
+.page {
+  width: 100%;
+}
+
 .banner {
-  text-align: center;
   padding: 48px 24px 86px;
+
+  &__breadcrumb {
+    max-width: 1064px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+  }
 
   &__title {
     font-size: 48px;
     font-weight: 900;
     line-height: 40px;
+    margin-top: 16px;
+    text-align: center;
   }
 }
 
@@ -82,25 +94,5 @@
     @media only screen and (max-width: 640px) {
       font-size: 24px;
     }
-  }
-}
-
-.footer {
-  align-items: center;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  font-size: 36px;
-  font-style: 800;
-  justify-content: center;
-  padding: 24px;
-  width: 100%;
-
-  @media only screen and (max-width: 1024px) {
-    font-size: 28px;
-  }
-
-  @media only screen and (max-width: 640px) {
-    font-size: 20px;
   }
 }

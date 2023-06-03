@@ -2,6 +2,7 @@ import '@styles/globals.css'
 import { Sofia_Sans } from 'next/font/google'
 
 import type { ReactNodeProps } from '@typings'
+import { Footer } from '@containers'
 
 const sofia = Sofia_Sans({ subsets: ['latin'] })
 
@@ -15,7 +16,12 @@ const RootLayout = (props: ReactNodeProps) => {
 
   return (
     <html lang="en">
-      <body className={sofia.className}>{children}</body>
+      <body
+        className={`flex min-h-screen flex-col items-center justify-between ${sofia.className}`}
+      >
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

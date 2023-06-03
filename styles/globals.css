@@ -13,6 +13,12 @@ body {
   color: var(--text-color);
 }
 
+main {
+  background-color: #6552ff;
+  background-image: linear-gradient(109.78deg, #6df2f2 15.67%, #8e84fd 86.57%);
+  position: relative;
+}
+
 iframe {
   width: 100%;
 }

@@ -4,11 +4,11 @@ import classnames from './ruta-detail.module.scss'
 
 import * as React from 'react'
 
-import type { Ruta, RutaDetailProps } from '@typings'
+import type { RutaDetailProps } from '@typings'
+import { Faq } from '@containers'
+import { Breadcrumb, Youtube } from '@components'
 import { queryClient } from '@utils'
 import { fetchRutaBySlug } from './ruta-detail.utils'
-import { Logo, Youtube } from '@components'
-import { Faq } from '@containers'
 
 const RutaDetail = (props: RutaDetailProps) => {
   const { params } = props
@@ -29,11 +29,14 @@ const RutaDetail = (props: RutaDetailProps) => {
           backgroundImage: `linear-gradient(50deg, ${primary} 0%, ${secondary} 100%)`,
         }}
       >
+        <div className={classnames.banner__breadcrumb}>
+          <Breadcrumb name={ruta.name} />
+        </div>
         <h3 className={classnames.banner__title}>{ruta.name}</h3>
       </div>
       <div className={classnames.content}>
         <div className={classnames.video}>
-          <Youtube width="520" height="306" src={ruta.youtube_video_id} />
+          <Youtube width="520" height="292" src={ruta.youtube_video_id} />
         </div>
         <div className={classnames.content__detail}>
           <div className={classnames.content__description1}>
@@ -48,9 +51,6 @@ const RutaDetail = (props: RutaDetailProps) => {
       <div className="mt-6">
         <Faq faqs={ruta.faqs} />
       </div>
-      <footer className={classnames.footer}>
-        <Logo />
-      </footer>
     </div>
   )
 }

@@ -6,20 +6,20 @@ import Link from 'next/link'
 
 const Home = () => {
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-between ${classnames.page}`}>
-      <article className={classnames.content}>
-        <div className={classnames.banner}>
-          <Image
-            width={640}
-            height={1024}
-            priority={true}
-            alt="Crack The Code"
-            src="/images/main-banner.webp"
-          />
-          <div className={classnames.header}>
-            <h1 className={classnames.title}>Crack The Code</h1>
-          </div>
+    <main className={classnames.main}>
+      <div className={classnames.banner}>
+        <Image
+          width={640}
+          height={1024}
+          priority={true}
+          alt="Crack The Code"
+          src="/images/main-banner.webp"
+        />
+        <div className={classnames.header}>
+          <h1 className={classnames.title}>Crack The Code</h1>
         </div>
+      </div>
+      <article className={classnames.content}>
         <h3 className="text-4xl font-bold text-black text-center mt-12 px-4">
           ¡Las herramientas del futuro, hoy!
         </h3>
@@ -28,7 +28,7 @@ const Home = () => {
           diversión.
         </h5>
         <div className={classnames.action}>
-          <Link className={classnames.link} href={Routes.COURSES}>
+          <Link className={classnames.link} href={Routes.RUTAS}>
             Ver rutas
           </Link>
         </div>
