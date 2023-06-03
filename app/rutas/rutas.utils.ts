@@ -1,9 +1,16 @@
-import { fetchRutasApi } from '@services'
+import type { RutasResponse } from '@typings'
+import { API_DOMAIN } from '@constants'
 
 async function fetchRutas() {
-  const response = await fetchRutasApi()
+  const pathname = `${API_DOMAIN}/api/rutas/`
 
-  return response
+  const response = await fetch(pathname, {
+    cache: 'no-store',
+  })
+
+  const json = await response.json()
+
+  return json as RutasResponse
 }
 
 export { fetchRutas }

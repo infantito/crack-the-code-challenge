@@ -1,10 +1,9 @@
-import { ENDPOINTS } from '@constants'
-import { Ruta, RutaDetailResponse } from '@typings'
+import type { Ruta, RutaDetailResponse } from '@typings'
 
 async function fetchRutaBySlugApi(params: Pick<Ruta, 'slug'>) {
   const { slug } = params
 
-  const pathname = ENDPOINTS.GET_RUTA_BY_SLUG.replace(':slug', slug)
+  const pathname = `https://dev.backend.devcrackthecode.net/api/learning-paths-all/${slug}/`
 
   const response = await fetch(pathname, {
     method: 'GET',
