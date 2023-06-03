@@ -1,4 +1,4 @@
-import classnames from './rutas.module.scss'
+import classnames from './root.module.scss'
 
 import { Routes } from '@constants'
 import Image from 'next/image'
@@ -20,7 +20,7 @@ const Home = () => {
             <h1 className={classnames.title}>Crack The Code</h1>
           </div>
         </div>
-        <h3 className="text-4xl font-bold text-black text-center mt-6 px-4">
+        <h3 className="text-4xl font-bold text-black text-center mt-12 px-4">
           ¡Las herramientas del futuro, hoy!
         </h3>
         <h5 className="text-xl text-black text-center mt-2 px-4">
